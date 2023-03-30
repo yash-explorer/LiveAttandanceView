@@ -7,8 +7,10 @@ const { kStringMaxLength } = require('buffer');
 app.set('view engine', 'ejs');
 
 
-mongoose.connect('mongodb+srv://yash1:<password>@cluster0.txq9fum.mongodb.net/test');
-
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.txq9fum.mongodb.net/test`, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 const AttSchema = {
     Name: String,
     Time: String,

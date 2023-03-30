@@ -7,7 +7,7 @@ const { kStringMaxLength } = require('buffer');
 app.set('view engine', 'ejs');
 
 
-mongoose.connect('mongodb+srv://yash1:yash1@cluster0.txq9fum.mongodb.net/test');
+mongoose.connect('mongodb+srv://yash1:<password>@cluster0.txq9fum.mongodb.net/test');
 
 const AttSchema = {
     Name: String,
